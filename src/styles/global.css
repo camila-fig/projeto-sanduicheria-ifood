@@ -13,6 +13,7 @@
     font-weight: normal;
     font-style: normal;
     color: #47515b;
+    box-sizing: border-box;
 }
 
 body {
