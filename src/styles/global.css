@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import "./header.css";
+
+body{
+    font-family: sans-serif;
+    font-style: normal;
+    color: #47515b;
+}
+
+li{
+    list-style-type: none;
+}
