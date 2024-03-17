@@ -10,7 +10,7 @@
 
   <body>
     <header class="header">
-      <div>
+      <div class="header__logo">
         <a href="/index.html" role="link" aria-label="Ir para página inicial"> 
           <img class="header__logo" src="./src/assets/logo-ifood.png" alt="Logo do Ifood">
         </a>
@@ -21,6 +21,9 @@
           <li><a href="./pages/restaurantes/" class="nav__item">Restaurantes</a></li>
           <li><a href="" class="nav__item">Mercados</a></li>
           <li><a href="" class="nav__item">Bebidas</a></li>
+          <li><a href="" class="nav__item">Farmácia</a></li>
+          <li><a href="" class="nav__item">Pet</a></li>
+          <li><a href="" class="nav__item">Shopping</a></li>
         </ul>        
       </nav>
 
@@ -29,43 +32,62 @@
       </form>
       
       <button class="header__address">
-        <div>
-          <span>
-            xxxx, xxx
+          <span class="header__address_street">
+            Rua das Flores, 548
 <!-- dados de endereço de entrega -->
+            <img class="header__address_arrow" src="./src/assets/arrow.png" alt="">
           </span>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#ff0000" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
-            </svg>
-          </span>
-        </div>
       </button>
 
-      <div>
-        <a class="header__login" href="./pages/login/login.html" aria-label="Entrar">
+        <span class="header__login">
+          <a href="./pages/login/login.html" aria-label="Entrar">
           <img class="header__login_icon" src="./src/assets/login.png" alt="Entrar">
-        </a>
+          </a>
+        </span>
+
         <button class="header__bag">
           <img class="header__bag_icon" src="./src/assets/bag.png" alt="Sacola de compras">
-          <p class="header__bag_info">
-            <span class="header-bag__cost">R$ ?,??</span>
-            <span class="header-bag__itens">?? itens</span>
-          </p>
+          <span class="header__bag_info">
+            <p class="header-bag__cost">R$ ?,??</p>
+            <p class="header-bag__itens">?? itens</p>
+          </span>
         </button>
-      </div>
+
     </header>
 
     <main class="main">
       <article>
-        <section class="main__first_carousel">
+        <section class="main__first">
+          <div class="main__first_menu">
+          <img src="./src/assets/restaurantes.png" alt="Link para restaurantes">
+          <div>Restaurantes</div>
+          </div>
+          <div class="main__first_menu">
+          <img src="./src/assets/mercado.png" alt="Link para mercado">
+          <div>Mercado</div>
+          </div>
+          <div class="main__first_menu">
+          <img src="./src/assets/farmacia.png" alt="Link para farmácia">
+          <div>Farmácia</div>
+          </div>
+          <div class="main__first_menu">      
+          <img src="./src/assets/pet.png" alt="Link para pet">
+          <div>Pet</div>
+          </div>
+          <div class="main__first_menu">
+          <img src="./src/assets/bebidas.png" alt="Link para bebidas">
+          <div>Bebidas</div>
+          <div class="main__first_menu">
+          <img src="./src/assets/gourmet.png" alt="Link para comidas gourmet">
+          <div>Gourmet</div>
+          </div>
+          </div>
         </section>
-        <section class="main__second_carousel">
-        </section>
-        <section class="main__third_carousel">
-        </section>
-        <section class="main__fourth_carousel">        
-        </section>
+
+        <section class="main__second"></section>
+        <section class="main__third"></section>
+        <section class="main__fourth"></section>
+
       </article>
       <ul class="main__btn">
         <li>
