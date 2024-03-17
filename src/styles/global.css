@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @import "./header.css";
 
-body{
-    font-family: sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
     font-style: normal;
     color: #47515b;
 }
 
-li{
-    list-style-type: none;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+ main {
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    gap: 16px;
+ }
