@@ -1,0 +1,142 @@
+.main{
+    padding: 35px 0 35px 0;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.main__first{
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.main__first_menu{
+    text-align: center;
+    font-size: 13px;
+}
+
+.main__first_menu:hover {
+    scale: 105%;
+}
+
+.main__menu_image{
+    width: 55%;
+}
+
+.main__second{
+    margin-top: 20px;
+}
+
+.main__third{
+    margin-top: 20px;
+}
+
+.main__fourth{
+    margin-top: 20px;
+}
+
+.main__btn{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    position:sticky;
+    top: 80px;
+    background-color: white;
+}
+
+.main__btn_item{
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    height: 40px;
+    width: auto;
+    white-space: nowrap;
+    padding: 0 30px 0 30px;
+}
+
+.main__stores{
+    margin-top: 20px;
+}
+
+.main__stores_description{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.store {
+    padding: 18px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100px 115px 115px;
+    grid-template-areas:
+    "box1 box2 box2"
+    "box1 box3 box4"
+    "box1 box5 box5";
+    column-gap: 10px;
+    white-space: nowrap;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    line-height: 25px;
+}
+
+.store:hover {
+    scale: 105%;
+}
+
+.store__logo{
+    width: 100px;
+    border-radius: 10px;
+    grid-area: box1;
+}
+
+.store__description{
+    font-size: 13px;
+}
+
+.store__description_title {
+    padding-top: 12px;
+    font-weight: 600;
+    grid-area: box2;
+}
+
+.nota {
+    color: #ffa500;
+    font-weight: 600;
+    grid-area: box3;
+}
+
+.distancia {
+    grid-area: box4;
+}
+
+.time {
+    grid-area: box5;
+}
+
+.ver__mais {
+    margin-top: 80px;
+    margin-bottom: 8px;
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.ver__mais:hover {
+    background-color: red;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 65px;
+    background-color: rgb(245, 245, 245);
+}
