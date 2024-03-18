@@ -1,4 +1,46 @@
 .footer {
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+.footer__box1 {
+    display: grid;
+    grid-template-columns: 200px 250px 250px;
+    grid-template-rows: 100px;
+    grid-template-areas: 
+    "subtitle1 subtitle2 subtitle3"
+    "list1 list2 footer__logos";
+    white-space: nowrap;
+}
+
+.subtitle1 {
+    grid-area: subtitle1;
+}
+
+.subtitle2 {
+    grid-area: subtitle2;
+}
+
+.subtitle3 {
+    grid-area: subtitle3;
+}
+
+.list1 {
+    grid-area: list1;
+}
+
+.list2 {
+    grid-area: list2;
+}
+
+.footer__logos{
+    grid-area: footer__logos;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 90%;
+    gap: 10%
+}
+
+.footer__subtitle {
+    font-weight: 600;
 }
