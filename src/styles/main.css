@@ -1,17 +1,17 @@
-.main{
+.main {
     padding: 35px 0 35px 0;
     margin-left: 160px;
     margin-right: 160px;
 }
 
-.main__first{
+.main__first {
     display: flex;
     flex-direction: row;
     box-sizing: content-box;
     width: 100%;
 }
 
-.main__first_menu{
+.main__first_menu {
     text-align: center;
     font-size: 13px;
 }
@@ -20,23 +20,23 @@
     scale: 105%;
 }
 
-.main__menu_image{
+.main__menu_image {
     width: 55%;
 }
 
-.main__second{
+.main__second {
     margin-top: 20px;
 }
 
-.main__third{
+.main__third {
     margin-top: 20px;
 }
 
-.main__fourth{
+.main__fourth {
     margin-top: 20px;
 }
 
-.main__btn{
+.main__btn {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -46,7 +46,7 @@
     background-color: white;
 }
 
-.main__btn_item{
+.main__btn_item {
     background-color: white;
     border: 1px solid #dcdcdc;
     border-radius: 20px;
@@ -56,11 +56,15 @@
     padding: 0 25px 0 25px;
 }
 
-.main__stores{
+.main__btn_item:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.main__stores {
     margin-top: 20px;
 }
 
-.main__stores_description{
+.main__stores_description {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -88,13 +92,13 @@
     scale: 105%;
 }
 
-.store__logo{
+.store__logo {
     width: 100px;
     border-radius: 10px;
     grid-area: box1;
 }
 
-.store__description{
+.store__description {
     font-size: 13px;
 }
 

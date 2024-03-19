@@ -58,14 +58,28 @@
     border-top: 1px solid lightgray;
     width: 90%;
     display: grid;
-    grid-template-columns:auto 1fr 1fr;
-    grid-template-rows:auto;
+    grid-template-columns: 80px 1fr 1fr;
+    grid-template-rows: 700px;
     grid-template-areas:
-    "logo2 "
-    "logo2 ";
+    "logo2 box1Foooter box2Foooter";
+    padding-top: 40px;
+    column-gap: 1%;
 }
 
 .footer__logo2 {
-    grid-area: logo2;
-    width: 15%;
+    grid-area: logo2;    
 }
+
+.footer__logo2_img {
+    width: 70px;
+}
+
+.identificacao1 {
+    grid-area: box1Foooter;
+}
+
+.identificacao2 {
+    grid-area: box2Foooter;
+    padding-left: 10px;
+}
+
