@@ -1,16 +1,22 @@
 .footer {
     font-size: 13px;
     margin-top: 40px;
+    margin-left: 10%;
 }
 
 .footer__box1 {
     display: grid;
-    grid-template-columns: 200px 250px 250px;
-    grid-template-rows: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
     grid-template-areas: 
     "subtitle1 subtitle2 subtitle3"
     "list1 list2 footer__logos";
     white-space: nowrap;
+    line-height: 50px;
+    border-top: 1px solid lightgray;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 90%;
 }
 
 .subtitle1 {
@@ -37,10 +43,29 @@
     grid-area: footer__logos;
     display: flex;
     flex-direction: row;
-    width: 90%;
-    gap: 10%
+    gap: 2%;
+}
+
+.footer__logos_icon{
+    height: 55%;
 }
 
 .footer__subtitle {
     font-weight: 600;
+}
+
+.footer__box2 {
+    border-top: 1px solid lightgray;
+    width: 90%;
+    display: grid;
+    grid-template-columns:auto 1fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+    "logo2 "
+    "logo2 ";
+}
+
+.footer__logo2 {
+    grid-area: logo2;
+    width: 15%;
 }
