@@ -79,10 +79,11 @@
   .header__address_street{
     font-size: 13px;
     font-weight: 600;
+    padding-right: 10px;
   }
 
   .header__address_arrow{
-    width: 3%;
+    width: 6%;
   }
 
   .header__login_icon{
