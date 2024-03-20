@@ -17,8 +17,8 @@
       </div>
       <nav class="header__nav">              
         <ul class="nav__list">
-          <li><a href="./index.html" class="nav__item">Início</a></li>
-          <li><a href="./pages/restaurantes/" class="nav__item">Restaurantes</a></li>
+          <li><a href="" class="nav__item">Início</a></li>
+          <li><a href="" class="nav__item">Restaurantes</a></li>
           <li><a href="" class="nav__item">Mercados</a></li>
           <li><a href="" class="nav__item">Bebidas</a></li>
           <li><a href="" class="nav__item">Farmácia</a></li>
@@ -31,12 +31,11 @@
         <input class="form_search__input_search" role="search" type="search" aria-label="Busque por item ou loja" placeholder="Busque por item ou loja">        
       </form>
       
-      <button class="header__address">
-          <span class="header__address_street">
-            R. João Alberto Tomazoni, 381
-<!-- dados de endereço de entrega -->
-            <img class="header__address_arrow" src="./src/assets/arrow.png" alt="">
-          </span>
+      <button onclick="save_address()" class="header__address">
+        <span class="header__address_street" id="address">
+          Insira seu endereço
+        </span>
+        <img class="header__address_arrow" src="./src/assets/arrow.png" alt="">
       </button>
 
         <span class="header__login">
@@ -244,5 +243,6 @@
         </div>
       </section>
     </footer>
+    <script src="./src/scripts/address.js"></script>
   </body>
 </html>
