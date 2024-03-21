@@ -59,7 +59,12 @@
     <main>
         <div class="header">
             <h1>Nome do restaurante</h1>  
-            <p>4.5</p>
+            <p><span class="nota">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
+              </svg>
+              4.5
+            </span></p>
             <button onclick="addGeral()" class="fazer__pedido">
             FAZER PEDIDO
             </button>
@@ -68,36 +73,36 @@
             <p>Ver mais</p>
             <p>Pedido mínimo R$ 20,00</p>
         </div>
-        <h2>Destaques</h2> <!--Pratos-->
+        <h2 class="destaque">Destaques</h2> <!--Pratos-->
         <div class="pratos">
             <div class="prato">
-                <h3>Italiano</h3>
-                <p>Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
-                <p>R$ 12,90</p>
+                <h3 class="prato__name">Italiano</h3>
+                <p class="prato__descricao">Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
+                <p class="prato__valor">R$ 12,90</p>
                 <p><s>R$ 16,90</s></p>
             </div>
             <div class="prato">
-                <h3>Grelhado</h3>
-                <p>Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
-                <p>R$ 15,90</p>
+                <h3 class="prato__name">Grelhado</h3>
+                <p class="prato__descricao">Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
+                <p class="prato__valor">R$ 15,90</p>
                 <p><s>R$ 19,90</s></p>
             </div>
             <div class="prato">
-                <h3>Bacon</h3>
-                <p>Bacon, mussarela,  tomate, alface, peito de peru, picles. Acompanha fritas.</p>
-                <p>R$ 19,90</p>
+                <h3 class="prato__name">Bacon</h3>
+                <p class="prato__descricao">Bacon, mussarela,  tomate, alface, peito de peru, picles. Acompanha fritas.</p>
+                <p class="prato__valor">R$ 19,90</p>
                 <p><s>R$ 24,90</s></p>
             </div>
             <div class="prato">
-                <h3>Queijo quente</h3>
-                <p>Mussarela, queijo prato, orégano</p>
-                <p>R$ 10,90</p>
+                <h3 class="prato__name">Queijo quente</h3>
+                <p class="prato__descricao">Mussarela, queijo prato, orégano</p>
+                <p class="prato__valor">R$ 10,90</p>
                 <p><s>R$ 13,90</s></p>
             </div>
             <div class="prato">
-                <h3>Rosbife</h3>
-                <p>Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
-                <p>R$ 19,90</p>
+                <h3 class="prato__name">Rosbife</h3>
+                <p class="prato__descricao">Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
+                <p class="prato__valor">R$ 19,90</p>
                 <p><s>R$ 24,90</s></p>
             </div>
         </div>

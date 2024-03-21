@@ -9,3 +9,43 @@
     font-weight: 600;
     background-color: red;
 }
+
+.header-2 {
+    font-size: 12px;
+}
+
+.destaque {
+    padding: 20px 0 20px 0;
+    font-weight: 600;
+}
+
+.pratos {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    padding-bottom: 40px;
+}
+
+.prato {
+    border: 1px solid lightgray;
+    padding: 15px;
+}
+
+.prato__name {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.prato__descricao {
+    font-size: 14px;
+    color: gray;
+    padding-bottom: 15px;
+}
+
+s {
+    text-decoration:line-through
+}
+
+.prato__valor {
+    color: forestgreen;
+}
