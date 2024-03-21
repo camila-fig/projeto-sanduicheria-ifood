@@ -1,0 +1,11 @@
+.fazer__pedido {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.fazer__pedido:hover {
+    color: white;
+    font-weight: 600;
+    background-color: red;
+}
