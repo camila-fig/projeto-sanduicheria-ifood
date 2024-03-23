@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./src/assets/favicon-ifood.png" type="image/x-icon">
-    <link rel="stylesheet" href="./src/styles/global.css">
-    <title>Delivery de Comida</title>
+    <link rel="shortcut icon" href="../../src/assets/favicon-ifood.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../src/styles/global.css">
+    <link rel="stylesheet" href="./index-ifood.css">
+    <title>Restaurantes</title>
   </head>
 
   <body>
+    <script src="/Entrega final- iFood/index-ifood.js"></script>
     <header class="header">
       <div>
-        <a href="/index.html" role="link" aria-label="Ir para página inicial"> 
-          <img class="header__logo" src="./src/assets/logo-ifood.png" alt="Logo do Ifood">
+        <a href="../../index.html" role="link" aria-label="Ir para página inicial"> 
+          <img class="header__logo" src="../../src/assets/logo-ifood.png" alt="Logo do Ifood">
         </a>
       </div>
       <nav class="header__nav">              
         <ul class="nav__list">
-          <li><a href="" class="nav__item">Início</a></li>
-          <li><a href="./pages/restaurantes/restaurantes.html" class="nav__item">Restaurantes</a></li>
+          <li><a href="../../index.html" class="nav__item">Início</a></li>
+          <li><a href="" class="nav__item">Restaurantes</a></li>
           <li><a href="" class="nav__item">Mercados</a></li>
           <li><a href="" class="nav__item">Bebidas</a></li>
           <li><a href="" class="nav__item">Farmácia</a></li>
@@ -35,18 +37,18 @@
         <span class="header__address_street" id="address">
           Insira seu endereço
         </span>
-        <img class="header__address_arrow" src="./src/assets/arrow.png" alt="">
+        <img class="header__address_arrow" src="../../src/assets/arrow.png" alt="">
       </button>
 
         <span class="header__login">
           <a href="./pages/login/login.html" aria-label="Entrar">
-          <img class="header__login_icon" src="./src/assets/login.png" alt="Entrar">
+          <img class="header__login_icon" src="../../src/assets/login.png" alt="Entrar">
           </a>
         </span>
 
-        <button class="header__bag">
+        <button onclick="verSacola()" class="header__bag"> <!-- Esse botão ativa a função "verSacola" do JS -->
           <span>
-          <img class="header__bag_icon" src="./src/assets/bag.png" alt="Sacola de compras">
+          <img class="header__bag_icon" src="../../src/assets/bag.png" alt="Sacola de compras">
           </span>
           <span class="header__bag_info">
             <p class="header-bag__cost">R$ 0,00</p>
@@ -55,136 +57,61 @@
         </button>        
     </header>
 
-    <main class="main">
-      <article>
-        <section class="main__first">
-          <div class="main__first_menu">
-            <a href="./pages/restaurantes/restaurantes.html">
-              <img class="main__menu_image" src="./src/assets/restaurantes.png" alt="Link para restaurantes">
-              <div class="main__menu_text">Restaurantes</div>
-            </a>
-          </div>
-          <div class="main__first_menu">
-          <img class="main__menu_image" src="./src/assets/mercado.png" alt="Link para mercado">
-          <div class="main__menu_text">Mercado</div>
-          </div>
-          <div class="main__first_menu">
-          <img class="main__menu_image" src="./src/assets/farmacia.png" alt="Link para farmácia">
-          <div class="main__menu_text">Farmácia</div>
-          </div>
-          <div class="main__first_menu">      
-          <img class="main__menu_image" src="./src/assets/pet.png" alt="Link para pet">
-          <div class="main__menu_text">Pet</div>
-          </div>
-          <div class="main__first_menu">
-          <img class="main__menu_image" src="./src/assets/bebidas.png" alt="Link para bebidas">
-          <div class="main__menu_text">Bebidas</div>
-          </div>
-          <div class="main__first_menu">
-          <img class="main__menu_image" src="./src/assets/gourmet.png" alt="Link para comidas gourmet">
-          <div class="main__menu_text">Gourmet</div>
-          </div>
-          </div>
-        </section>
-
-        <section class="main__second">222</section>
-        <section class="main__third">333</section>
-        <section class="main__fourth">444</section>
-
-      </article>
-
-      <ul class="main__btn">
-        <li><button class="main__btn_item">Ordenar</button></li>
-        <li><button class="main__btn_item">Entrega Grátis</button></li>
-        <li><button class="main__btn_item">Vale-refeição</button></li>
-        <li><button class="main__btn_item">Distância</button></li>
-        <li><button class="main__btn_item">Entrega Parceira</button></li>
-        <li><button class="main__btn_item">Super Restaurantes</button></li>
-        <li><button class="main__btn_item">Filtros</button></li>
-        <li><button class="main__btn_item">Limpar</button></li>
-      </ul>
-
-      <article class="main__stores">        
-        <div>
-          <h3>Lojas</h3>
+    <main>
+        <div class="header">
+            <h1>Nome do restaurante</h1>  
+            <p><span class="nota">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
+              </svg>
+              4.5
+            </span></p>
+            <button id="addGeral" type="button" onclick="addGeral();">Adicionar itens à sacola</button> <!-- Esse botão ativa a função "addGeral" do JS -->
         </div>
-        <div class="main__stores_description">
-          <div class="store">
-            <div>
-              <img class="store__logo" src="./src/assets/dino-burguer.png" alt="Dino Burguer">              
-            </div>
-            <div class="store__description">
-              <h3 class="store__description_title">Dino Burguer</h3>              
-              <span class="nota">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
-                </svg>
-                4,6
-              </span>
-              <span class="distancia">. Lanches . 1,2 km</span>
-              <p class="time">90-100 min . R$ 14,99</p>                
-            </div>
-          </div>
-
-          <div class="store">
-            <div>
-              <img class="store__logo" src="./src/assets/dino-burguer.png" alt="Dino Burguer">              
-            </div>
-            <div class="store__description">
-              <h3 class="store__description_title">Dino Burguer2</h3>              
-              <span class="nota">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
-                </svg>
-                4,6
-              </span>
-              <span class="distancia">. Lanches . 1,2 km</span>
-              <p class="time">90-100 min . R$ 14,99</p>                
-            </div>
-          </div>          
-
-          <div class="store">
-            <div>
-              <img class="store__logo" src="./src/assets/dino-burguer.png" alt="Dino Burguer">              
-            </div>
-            <div class="store__description">
-              <h3 class="store__description_title">Dino Burguer3</h3>              
-              <span class="nota">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
-                </svg>
-                4,6
-              </span>
-              <span class="distancia">. Lanches . 1,2 km</span>
-              <p class="time">90-100 min . R$ 14,99</p>                
-            </div>
-          </div>
-
-          <div class="store">
-            <div>
-              <img class="store__logo" src="./src/assets/dino-burguer.png" alt="Dino Burguer">              
-            </div>
-            <div class="store__description">
-              <h3 class="store__description_title">Dino Burguer4</h3>              
-              <span class="nota">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
-                </svg>
-                4,6
-              </span>
-              <span class="distancia">. Lanches . 1,2 km</span>
-              <p class="time">90-100 min . R$ 14,99</p>                
-            </div>
-          </div>
-
-
-          </div>
-          <div class="ver__mais">
-            Ver mais                    
-          </div>
+        <div class="header-2">
+            <p>Ver mais</p>
+            <p>Pedido mínimo R$ 20,00</p>
         </div>
-      </article>        
+        <h2 class="destaque">Destaques</h2> <!--Pratos-->
+        <div class="pratos">
+            <div class="prato">
+                <h3 class="prato__name">Italiano</h3>
+                <p class="prato__descricao">Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
+                <p class="prato__valor">R$ 12,90</p>
+                <p><s>R$ 16,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Italiano)">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+            </div>
+            <div class="prato">
+                <h3 class="prato__name">Grelhado</h3>
+                <p class="prato__descricao">Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
+                <p class="prato__valor">R$ 15,90</p>
+                <p><s>R$ 19,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Grelhado);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+            </div>
+            <div class="prato">
+                <h3 class="prato__name">Bacon</h3>
+                <p class="prato__descricao">Bacon, mussarela,  tomate, alface, peito de peru, picles. Acompanha fritas.</p>
+                <p class="prato__valor">R$ 19,90</p>
+                <p><s>R$ 24,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Bacon);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+            </div>
+            <div class="prato">
+                <h3 class="prato__name">Queijo quente</h3>
+                <p class="prato__descricao">Mussarela, queijo prato, orégano</p>
+                <p class="prato__valor">R$ 10,90</p>
+                <p><s>R$ 13,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(QueijoQuente);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+            </div>
+            <div class="prato">
+                <h3 class="prato__name">Rosbife</h3>
+                <p class="prato__descricao">Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
+                <p class="prato__valor">R$ 19,90</p>
+                <p><s>R$ 24,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Rosbife);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+            </div>
+        </div>
     </main>
+    
 
     <div class="container">        
     </div>
@@ -213,16 +140,16 @@
           <h3 class="footer__subtitle subtitle3">Social</h3>
           <ul class="footer__logos">
             <li><a href="https://www.facebook.com/iFood/" role="button" aria-label="Facebook" target="_blank" rel="noopener">
-                <img class="footer__logos_icon" src="./src/assets/facebook.png" alt="Facebook">
+                <img class="footer__logos_icon" src="../../src/assets/facebook.png" alt="Facebook">
               </a></li>
             <li><a href="https://twitter.com/ifood" role="button" aria-label="Twitter" target="_blank" rel="noopener">
-                <img class="footer__logos_icon" src="./src/assets/twitter.png" alt="Twitter">        
+                <img class="footer__logos_icon" src="../../src/assets/twitter.png" alt="Twitter">        
               </a></li>
             <li><a href="https://www.youtube.com/user/ifooddelivery" role="button" aria-label="Youtube" target="_blank" rel="noopener">
-                <img class="footer__logos_icon" src="./src/assets/youtube.png" alt="YouTube">
+                <img class="footer__logos_icon" src="../../src/assets/youtube.png" alt="YouTube">
               </a></li>
             <li><a href="https://www.instagram.com/ifoodbrasil/" role="button" aria-label="Instagram" target="_blank" rel="noopener">
-                <img class="footer__logos_icon" src="./src/assets/instagram.png" alt="Instagram">
+                <img class="footer__logos_icon" src="../../src/assets/instagram.png" alt="Instagram">
               </a></li>
           </ul>
         </div>
@@ -231,7 +158,7 @@
       <section class="footer__box2">
         <div class="footer__logo2">
           <a href="./index.html" title="Voltar ao topo">
-            <img class="footer__logo2_img" src="./src/assets/logo-ifood-footer.png" alt="Voltar para home">
+            <img class="footer__logo2_img" src="../../src/assets/logo-ifood-footer.png" alt="Voltar para home">
           </a>
         </div>
         <div class="identificacao1">
@@ -245,6 +172,7 @@
         </div>
       </section>
     </footer>
-    <script src="./src/scripts/address.js"></script>
+    <script src="../../src/scripts/address.js"></script>
+    <script src="../../src/scripts/restaurantes.js"></script>
   </body>
 </html>
