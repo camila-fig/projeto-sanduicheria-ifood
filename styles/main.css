@@ -6,6 +6,7 @@
 
 .nota {
     color: #ffa500;
+    font-weight: 600;
 }
 
 .header-2 {
@@ -25,8 +26,11 @@
 }
 
 .prato {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
     border: 1px solid lightgray;
     padding: 15px;
+    gap: 5px;
 }
 
 .prato__name {
@@ -58,6 +62,10 @@ s {
     color: white;
     font-weight: 600;
     background-color:firebrick;
+}
+
+.foto {
+    height: 120px;
 }
 
 .container {
