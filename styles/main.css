@@ -65,6 +65,10 @@
     gap: 5px;
 }
 
+.prato:hover {
+    border: 1px solid gray;
+}
+
 .prato__name {
     font-size: 20px;
     padding-bottom: 5px;
