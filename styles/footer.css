@@ -6,7 +6,7 @@
 
 .footer__box1 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
     "subtitle1 subtitle2 subtitle3"
@@ -58,7 +58,7 @@
     border-top: 1px solid lightgray;
     width: 90%;
     display: grid;
-    grid-template-columns: 80px 1fr 1fr;
+    grid-template-columns: 1fr 5fr 5fr;
     grid-template-rows: 700px;
     grid-template-areas:
     "logo2 box1Foooter box2Foooter";
