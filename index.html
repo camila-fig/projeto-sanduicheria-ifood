@@ -9,10 +9,9 @@
   </head>
 
   <body>
-    <script src="/Entrega final- iFood/index-ifood.js"></script>
     <header class="header">
       <div>
-        <a href="../../index.html" role="link" aria-label="Ir para página inicial"> 
+        <a href="#" role="link" aria-label="Ir para página inicial"> 
           <img class="header__logo" src="./images/logo-ifood.png" alt="Logo do Ifood">
         </a>
       </div>
@@ -50,8 +49,8 @@
           <img class="header__bag_icon" src="./images/bag.png" alt="Sacola de compras">
           </span>
           <span class="header__bag_info">
-            <p class="header-bag__cost">R$ 0,00</p>
-            <p class="header-bag__itens">0 itens</p>
+            <p id="header-bag__cost">R$ 0,00</p>
+            <p id="header-bag__itens">0 itens</p>
           </span>
         </button>        
     </header>
@@ -81,7 +80,7 @@
                 <p class="prato__descricao">Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
                 <p class="prato__valor">R$ 12,90</p>
                 <p><s>R$ 16,90</s></p><br>
-                <button class="addIndividual" type="button" onclick="addIndividual(Italiano)">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+                <button class="addIndividual" type="button" onclick="addIndividual(italiano)">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
                 </div>
                 <img class="foto" src="./images/italiano.png" alt="">
               </div>
@@ -91,7 +90,7 @@
                 <p class="prato__descricao">Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
                 <p class="prato__valor">R$ 15,90</p>
                 <p><s>R$ 19,90</s></p><br>
-                <button class="addIndividual" type="button" onclick="addIndividual(Grelhado);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+                <button class="addIndividual" type="button" onclick="addIndividual(grelhado);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
                 </div>
                 <img class="foto" src="./images/grelhado.jpg" alt="">
               </div>
@@ -101,7 +100,7 @@
                 <p class="prato__descricao">Bacon, mussarela,  tomate, alface, peito de peru, picles. Acompanha fritas.</p>
                 <p class="prato__valor">R$ 19,90</p>
                 <p><s>R$ 24,90</s></p><br>
-                <button class="addIndividual" type="button" onclick="addIndividual(Bacon);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+                <button class="addIndividual" type="button" onclick="addIndividual(bacon);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
                 </div>
                 <img class="foto" src="./images/bacon.jpg" alt="">
             </div>
@@ -111,7 +110,7 @@
                 <p class="prato__descricao">Mussarela, queijo prato, orégano</p>
                 <p class="prato__valor">R$ 10,90</p>
                 <p><s>R$ 13,90</s></p><br>
-                <button class="addIndividual" type="button" onclick="addIndividual(QueijoQuente);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+                <button class="addIndividual" type="button" onclick="addIndividual(queijo);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
                 </div>
                 <img class="foto" src="./images/queijo-quente.jpg" alt=""> 
               </div>
@@ -121,7 +120,7 @@
                 <p class="prato__descricao">Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
                 <p class="prato__valor">R$ 19,90</p>
                 <p><s>R$ 24,90</s></p><br>
-                <button class="addIndividual" type="button" onclick="addIndividual(Rosbife);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+                <button class="addIndividual" type="button" onclick="addIndividual(rosbife);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
                 </div>
                 <img class="foto" src="./images/rosbife.jpg" alt="">
               </div>
@@ -131,7 +130,7 @@
               <p class="prato__descricao">Sanduíche de croissant com bacon crocante de ovos mexidos e purê de abacate</p>
               <p class="prato__valor">R$ 19,90</p>
               <p><s>R$ 24,90</s></p><br>
-              <button class="addIndividual" type="button" onclick="addIndividual(Rosbife);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+              <button class="addIndividual" type="button" onclick="addIndividual(croissant);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
               </div>
               <img class="foto" src="./images/acabate.png" alt="">
             </div>
