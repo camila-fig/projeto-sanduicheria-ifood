@@ -95,3 +95,15 @@ sacola.map ((bag) => {
     }
     else {saveItem.innerHTML = `${quantidadeItens} item`}
 })}
+
+
+// Botão sacola que abre o modal
+const modal = document.querySelector(".modal__container")
+
+function verSacola() {
+    modal.classList.add("active")
+}
+
+function closeModal() {
+    modal.classList.remove("active")
+}

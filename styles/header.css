@@ -91,12 +91,13 @@
   }
 
   .header__bag{
+    cursor: pointer;
     white-space: nowrap;
     background-color: white;
     border-radius: 100px;
     align-items: center;
     position: relative;
-    padding: 8px 12px;
+    padding: 8px 30px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 50% 50%;
@@ -110,14 +111,164 @@
   }
 
   .header__bag_icon{
-    width: 100%;
+    margin-left: -30px;
+    width: 130%;
     grid-area: box1;
   }
 
   .header__bag_info{
+    margin-left: -15px;
     font-size: 12px;
     grid-area: box2;
   }
 
 
-  
+  /* Estilização do modal */
+  .modal__container {
+    position: fixed;
+    right: 0;
+    top: 80px;
+    max-width: 90%; 
+    display: none; 
+}
+
+.modal {
+  background-color: white;
+  padding: 10px 20px 20px 20px;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .6s;
+}
+
+@keyframes modal {
+  from {
+    transform: translate3d(60px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btn__close {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.btn__close-image {
+    width:15px
+}
+
+.geral {
+    background-color: white;
+    padding: 0 20px 20px 20px;
+}
+
+.section_one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.seu__pedido {
+    font-size: 14px;
+    width: 100%;
+}
+
+.nome__restaurante {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.ver__cardapio {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: red;
+    font-weight: 400;    
+}
+
+.mais__vendidos{
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.order{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: solid lightgray 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order__value{
+    font-weight: 600;
+}
+
+.btn__editar-remover {
+    border-bottom: solid lightgray 1px;
+    padding-bottom: 15px;
+}
+
+#btn-editar {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#btn-remover {
+    background-color: white;
+    font-weight: 600;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.subtotal {
+    font-size: 14px;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.entrega {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.total {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.total__titulo {
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+#total__valor {
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+#btn-pgto {
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 15px 100px;
+    border-radius: 5px;
+    white-space: nowrap;
+}

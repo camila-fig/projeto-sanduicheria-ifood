@@ -12,6 +12,18 @@
     padding-bottom: 20px;
 }
 
+.container__titulo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 24px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
 .sanduicheria__logo {
     width: 7%;
     border: 1px solid lightgray;
@@ -24,6 +36,7 @@
 }
 
 .header__1 {
+    padding-top: 15px;
     text-align: right;
 }
 
