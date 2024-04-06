@@ -18,7 +18,7 @@ let bacon = {
     preçoOriginal: 24.90,
 }
 
-let queijo = {
+let queijoQuente = {
     nome: "Queijo Quente",
     preçoDesconto: 10.90,
     preçoOriginal: 13.90,
@@ -36,7 +36,7 @@ let croissant = {
     preçoOriginal: 24.90,
 }
 
-const opções = ['italiano', 'grelhado', 'bacon', 'queijo', 'rosbife', 'croissant'] // Array de todas as opções de itens para comparação com o selecionado nos prompts
+const opções = ['italiano', 'grelhado', 'bacon', 'queijoQuente', 'rosbife', 'croissant'] // Array de todas as opções de itens para comparação com o selecionado nos prompts
 const sacola = [] // Array da sacola, itens adicionados entram aqui
 
 
