@@ -62,6 +62,17 @@ const addGeral = (addGeral) => {
 }
 
 
+// Botão sacola que abre e fecha o modal
+const modal = document.querySelector(".modal__container")
+
+function verSacola() {
+    modal.classList.add("active")
+}
+function closeModal() {
+    modal.classList.remove("active")
+}
+
+
 // Botão de adicionar dentro de cada item, prompt pede a quantidade e adiciona no array da Sacola
 const addIndividual = (item) => { 
     const quantItemIndividual = parseInt (prompt ('Quantas unidades você deseja adicionar à sacola?'))
@@ -94,16 +105,58 @@ sacola.map ((bag) => {
         saveItem.innerHTML = `${quantidadeItens} itens`
     }
     else {saveItem.innerHTML = `${quantidadeItens} item`}
-})}
+})
 
 
-// Botão sacola que abre o modal
-const modal = document.querySelector(".modal__container")
+//Comandos de dentro do modal
+const orderName = document.getElementById('order-name')
+const orderValue = document.getElementById('order-value')
+const subtotal = document.getElementById('sub__valor')
+const total = document.getElementById('total__valor')
 
-function verSacola() {
-    modal.classList.add("active")
+
+localStorage.setItem("pedido", JSON.stringify(sacola))
+const InfoLocalStorage = JSON.parse(localStorage.getItem("pedido"))
+
+InfoLocalStorage.map((item) => {
+    const precoDesconto = item.preçoDesconto.toFixed(2).toString().replace(".", ",")
+    const criaNome = document.createElement('p')       
+    const criaValor = document.createElement('p')
+
+    criaNome.innerHTML = `${item.nome}`
+    criaValor.innerHTML = `R$ ${precoDesconto}`
+
+    orderName.append(criaNome)
+    orderValue.append(criaValor)
+    })           
+
+subtotal.innerHTML = totalSacolaDuasCasas
+
+function totalComTaxa (totalSacola, taxa) {
+    return totalSacola + taxa;
+}
+var resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
+total.innerHTML = resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")
+
+
+console.log(InfoLocalStorage)
+
 }
 
-function closeModal() {
-    modal.classList.remove("active")
+
+//Tecla remover dentro do modal
+const apagarTudo = document.getElementById('sacolaCheia')
+const sacolaVazia = document.getElementById('containerGeral')
+
+function btnRemover() {
+    localStorage.removeItem("pedido")
+    apagarTudo.remove()
+
+    const criarSacolaVazia = document.createElement("div")
+    criarSacolaVazia.innerHTML =`
+    <img src="./images/sacola-vazia.png" alt="Imagem de sacola vazia" style="padding: 60px 40px 40px 60px;" width="90%">
+    <p style="font-size:14px;font-weight:600;text-align:center;">Sua sacola está vazia</p>
+    <p style="font-size:13px;text-align:center;padding: 15px">Adicione itens</p>
+    `
+    sacolaVazia.append(criarSacolaVazia)
 }

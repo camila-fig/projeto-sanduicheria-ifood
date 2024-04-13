@@ -58,7 +58,8 @@
         <button onclick="closeModal()" class="btn__close">
           <img class="btn__close-image" src="./images/fechar.png" alt="Icone fechar">
         </button>
-        <div class="geral">
+        <div class="geral" id="containerGeral">
+        <div id="sacolaCheia">
           <div class="section_one">
             <p class="seu__pedido">Seu pedido em</p>
             <h3 class="nome__restaurante">Sanduicheria</h3>
@@ -66,12 +67,12 @@
           </div>
           <h5 class="mais__vendidos">Mais Vendidos!!!</h5>
           <div class="order">
-            <span class="order__name">1x Italiano</span>
-            <span class="order__value">R$ 19,90</span>
+            <span class="order__name" id="order-name"></span>
+            <span class="order__value" id="order-value"></span>
           </div>
           <div class="btn__editar-remover">
-            <button id="btn-editar" onclick="btn__editar()">Editar</button>
-            <button id="btn-remover" onclick="btn__remover()">Remover</button>
+            <button id="btn-editar" onclick="btnEditar()">Editar</button>
+            <button id="btn-remover" onclick="btnRemover()">Remover</button>
           </div>
           <div class="cupom">
             <img class="cupom__image" src="./images/cupom.png" alt="Icone de aplicar um cupom">
@@ -82,7 +83,7 @@
           <div class="resumo_valores">
             <div class="subtotal">
               <span>Subtotal</span>
-              <span id="sub__valor">R$ 19,90</span>
+              <span id="sub__valor"></span>
             </div>
             <div class="entrega">
               <span>Taxa de entrega</span>
@@ -92,10 +93,11 @@
           <div>
             <div class="total">
               <span class="total__titulo">Total</span>
-              <span id="total__valor">R$ 29,80</span>
+              <span id="total__valor"></span>
             </div>
             <button id="btn-pgto" onclick="btn__pagto()">Escolher forma de pagamento</button>
           </div>
+        </div>
         </div>
     </section>
     </div>
@@ -246,7 +248,6 @@
       </div>
     </section>
   </footer>
-
   <script src="./scripts/address.js"></script>
   <script src="./scripts/order.js"></script>
 </body>
