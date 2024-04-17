@@ -40,31 +40,8 @@ const opções = ['italiano', 'grelhado', 'bacon', 'queijoQuente', 'rosbife', 'c
 const sacola = [] // Array da sacola, itens adicionados entram aqui
 
 
-// Botão de adicionar, prompt pede pro cliente digitar o nome do item e a quantidade que deseja adicionar e inclui isso no array da Sacola
-// Estamos pensando em excluir este botão
-const addGeral = (addGeral) => { 
-    const addItemGeral = prompt ('Qual item você deseja adicionar à sacola?')
-    const quantItemGeral = parseInt (prompt ('Quantas unidades você deseja adicionar à sacola?'))
-    if (opções.includes(addItemGeral) && quantItemGeral == 1) { // Retorna o item adicionado no singular
-        for (let i = 0; i < quantItemGeral; i++)
-        sacola.push(addItemGeral)
-        alert (`O item ${addItemGeral} foi adicionado à sua sacola`)
-    } else if (opções.includes(addItemGeral) && quantItemGeral > 1) { // Retorna o item adicionado no plural
-        for (let i = 0; i < quantItemGeral; i++)
-        sacola.push(addItemGeral)
-        alert (`O item ${addItemGeral} foi adicionado ${quantItemGeral} vezes à sua sacola`)
-    } // ---
-    else if (quantItemGeral == 0) { // Retorna erro caso a quantidade seja 0
-        return alert (`Insira uma quantidade válida.`)
-    } else { // Retorna erro caso o item não exista no array opções
-        return alert (`O item digitado não existe.`)
-    } // ---
-}
-
-
 // Botão sacola que abre e fecha o modal
 const modal = document.querySelector(".modal__container")
-
 function verSacola() {
     modal.classList.add("active")
 }
@@ -90,7 +67,7 @@ const addIndividual = (item) => {
     }
 
 
- //Para escrever a quantidade total de itens e o valor total ao lado do desenho da sacola no header
+ //Para escrever a quantidade total de itens e o valor total ao lado do desenho da sacola no cabeçalho
 const saveItem = document.getElementById("header-bag__itens")
 const saveValue = document.getElementById("header-bag__cost")
 
@@ -113,50 +90,71 @@ const orderName = document.getElementById('order-name')
 const orderValue = document.getElementById('order-value')
 const subtotal = document.getElementById('sub__valor')
 const total = document.getElementById('total__valor')
+const criaNome = document.createElement('p') 
+const criaValor = document.createElement('p')
 
-
+//Para armazenar os preços por item
 localStorage.setItem("pedido", JSON.stringify(sacola))
-const InfoLocalStorage = JSON.parse(localStorage.getItem("pedido"))
+const InfoLocalStorageSacola = JSON.parse(localStorage.getItem("pedido"))
 
-InfoLocalStorage.map((item) => {
+InfoLocalStorageSacola.map((item) => {
     const precoDesconto = item.preçoDesconto.toFixed(2).toString().replace(".", ",")
-    const criaNome = document.createElement('p')       
-    const criaValor = document.createElement('p')
-
-    criaNome.innerHTML = `${item.nome}`
     criaValor.innerHTML = `R$ ${precoDesconto}`
-
-    orderName.append(criaNome)
     orderValue.append(criaValor)
-    })           
+})
 
+//Para armazenar o pedido com quantidades (agrupados)
+const cont = []
+let totalCont = 1;
+for (let i = 0; i < sacola.length; i++) {
+    const nomeItem = sacola[i].nome
+    if (i < sacola.length - 1 && nomeItem == sacola[i + 1].nome) {
+        totalCont++
+    } else {            
+        cont.push({nome: nomeItem, total: totalCont})
+        totalCont = 1       
+    }
+    
+localStorage.setItem("quantidades", JSON.stringify(cont))
+const InfoLocalStorageCont = JSON.parse(localStorage.getItem("quantidades"))
+
+InfoLocalStorageCont.map((item) =>{
+    criaNome.innerHTML = `${item.total}x ${sacola[i].nome}`
+    orderName.append(criaNome)
+})        
+    }
+
+             
+//Para escrever o valor total dentro do modal
 subtotal.innerHTML = totalSacolaDuasCasas
 
+//Para escrever o valor total somado com frete dentro do modal
 function totalComTaxa (totalSacola, taxa) {
     return totalSacola + taxa;
 }
-var resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
+let resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
 total.innerHTML = resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")
 
 
-console.log(InfoLocalStorage)
+
+console.log(InfoLocalStorageSacola)
 
 }
 
 
-//Tecla remover dentro do modal
-const apagarTudo = document.getElementById('sacolaCheia')
-const sacolaVazia = document.getElementById('containerGeral')
+// //Tecla remover dentro do modal
+// const apagarTudo = document.getElementById('sacolaCheia')
+// const sacolaVazia = document.getElementById('containerGeral')
 
-function btnRemover() {
-    localStorage.removeItem("pedido")
-    apagarTudo.remove()
+// function btnRemover() {
+//     localStorage.removeItem("pedido")
+//     apagarTudo.remove()
 
-    const criarSacolaVazia = document.createElement("div")
-    criarSacolaVazia.innerHTML =`
-    <img src="./images/sacola-vazia.png" alt="Imagem de sacola vazia" style="padding: 60px 40px 40px 60px;" width="90%">
-    <p style="font-size:14px;font-weight:600;text-align:center;">Sua sacola está vazia</p>
-    <p style="font-size:13px;text-align:center;padding: 15px">Adicione itens</p>
-    `
-    sacolaVazia.append(criarSacolaVazia)
-}
+//     const criarSacolaVazia = document.createElement("div")
+//     criarSacolaVazia.innerHTML =`
+//     <img src="./images/sacola-vazia.png" alt="Imagem de sacola vazia" style="padding: 60px 40px 40px 60px;" width="90%">
+//     <p style="font-size:14px;font-weight:600;text-align:center;">Sua sacola está vazia</p>
+//     <p style="font-size:13px;text-align:center;padding: 15px">Adicione itens</p>
+//     `
+//     sacolaVazia.append(criarSacolaVazia)
+// }
