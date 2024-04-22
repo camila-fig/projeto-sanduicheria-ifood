@@ -129,7 +129,7 @@ const addIndividual = (item) => {
 
 
     //Para escrever o valor total dentro do modal
-    subtotal.innerHTML = totalSacolaDuasCasas
+    subtotal.innerHTML = `R$ ${totalSacolaDuasCasas}`
 
 
     //Para escrever o valor total somado com frete dentro do modal
@@ -137,7 +137,7 @@ const addIndividual = (item) => {
         return totalSacola + taxa
     }
     let resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
-    total.innerHTML = resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")
+    total.innerHTML = `R$ ${resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")}`
 }
 
 
