@@ -138,16 +138,25 @@ const addIndividual = (item) => {
     }
     let resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
     total.innerHTML = `R$ ${resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")}`
+
 }
 
-
-// //Tecla remover dentro do modal
+// //Botão remover dentro do modal
 // const apagarTudo = document.getElementById('sacolaCheia')
 // const sacolaVazia = document.getElementById('containerGeral')
+    // const btnRemover = document.getElementById('btn-remover')
 
-// function btnRemover() {
-//     localStorage.removeItem("pedido")
-//     apagarTudo.remove()
+    // btnRemover.addEventListener("click", () => {
+    //     InfoLocalStorageSacola.pop()})
+
+// if (InfoLocalStorSacola.length > 1){
+//     function btnRemover() {
+//         sacola.pop()
+//     }
+// } else {
+//     function btnRemover() {
+//         localStorage.removeItem("pedido")
+//         apagarTudo.remove()
 
 //     const criarSacolaVazia = document.createElement("div")
 //     criarSacolaVazia.innerHTML =`
@@ -157,3 +166,5 @@ const addIndividual = (item) => {
 //     `
 //     sacolaVazia.append(criarSacolaVazia)
 // }
+// }
+

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: #47515b;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("../images/fundo-login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ main { 
+    width: 100%;
+    max-width: 1200px;
+ }
+
+ .logo-ifood2 {
+    width: 13%;
+    padding: 60px;
+ }
+
+ .container {
+    width: 510px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .05), 0 4px 16px rgba(0, 0, 0, .06);
+    border-radius: 8px;
+    padding: 36px 50px 60px 50px;
+    background-color: #fff;
+    margin-left: 55%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ h1 {
+    font-weight: 600;
+    padding-bottom: 30px;
+ }
+
+ .texto {
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: gray;
+ }
+
+ .btn__facebook {
+    background-color: rgb(58 85 159);
+    border-radius: 5px;
+    padding: 10px 5px 10px 15px;
+    display: flex;
+    gap: 70px;
+ }
+
+ .btn__facebook:hover {
+    opacity: 0.7;
+ }
+
+ .facebook-colorido {
+    width: 7%;
+    border-radius: 8px;
+ }
+
+ .facebook-texto {
+    padding-top: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+ }
+
+ .espaco1 {
+    padding: 5px;
+ }
+
+.btn__google {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 5px 10px 15px;
+    display: flex;
+    gap: 85px;
+    border: 1px solid lightgray
+}
+
+.btn__google:hover {
+    border:1px solid rgb(200 210 235);
+    background-color: rgb(241 243 250);
+ }
+
+ .google-colorido {
+    width: 5%;
+    border-radius: 8px;
+ }
+
+ .google-texto {
+    font-size: 15px;
+    font-weight: 500;
+ }
+
+ .espaco2 {
+    padding: 12px;
+ }
+
+ .btns-celular-email {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+ }
+
+ .btn-celular {
+    font-weight: 600;
+    color: darkgray;
+    width: 50%;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+ }
+
+ .btn-celular:hover {
+    background-color: #ea1d2c;
+    color: white;
+ }
+
+ .btn-email {
+    font-weight: 600;
+    color: darkgray;
+    width: 50%;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+ }
+
+ .btn-email:hover {
+    background-color: #ea1d2c;
+    color: white;
+ }
+
+ .border {
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+ }

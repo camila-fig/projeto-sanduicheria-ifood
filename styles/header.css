@@ -136,8 +136,8 @@
   background-color: white;
   padding: 10px 20px 20px 20px;
   -webkit-box-shadow: -1px 0px 1px 0px rgba(204,204,204,0.4);
--moz-box-shadow: -1px 0px 1px 0px rgba(204,204,204,0.4);
-box-shadow: -1px 0px 1px 0px rgba(204,204,204,0.4);
+  -moz-box-shadow: -1px 0px 1px 0px rgba(204,204,204,0.4);
+  box-shadow: -1px 0px 1px 0px rgba(204,204,204,0.4);
 }
 
 .active {
@@ -285,7 +285,7 @@ box-shadow: -1px 0px 1px 0px rgba(204,204,204,0.4);
 .entrega {
     font-size: 14px;
     padding-top: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
