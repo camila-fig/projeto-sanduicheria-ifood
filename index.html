@@ -31,7 +31,8 @@
       <input class="form_search__input_search" role="search" type="search" aria-label="Busque por item ou loja"
         placeholder="Busque por item ou loja">
     </form>
-    <button onclick="save_address()" class="header__address"> <!-- Esse botão solicita preencher rua/avenida e número -->
+    <button onclick="save_address()" class="header__address">
+      <!-- Esse botão solicita preencher rua/avenida e número -->
       <span class="header__address_street" id="address">
         Insira seu endereço
       </span>
@@ -42,7 +43,8 @@
         <img class="header__login_icon" src="./images/login.png" alt="Entrar">
       </a>
     </span>
-    <button id="open__modal" onclick="verSacola()" class="header__bag"> <!-- Esse botão ativa a função "verSacola" do JS -->
+    <button id="open__modal" onclick="verSacola()" class="header__bag">
+      <!-- Esse botão ativa a função "verSacola" do JS -->
       <span>
         <img class="header__bag_icon" src="./images/bag.png" alt="Sacola de compras">
       </span>
@@ -53,56 +55,71 @@
     </button>
 
     <!-- Conteúdo de dentro do modal -->
+    <section class="modal__container-vazio">
+      <div class="modal__vazio">
+        <div>
+        <button onclick="closeModal()" class="btn__close">
+          <img class="btn__close-image" src="./images/fechar.png" alt="Icone fechar">
+        </button>
+      </div>
+        <img class="sacola__vazia-image" src="./images/sacola-vazia.png" alt="Imagem de sacola vazia"
+          style="padding: 60px 40px 40px 60px;" width="90%">
+        <p class="sacola__vazia" style="font-size:14px;font-weight:600;text-align:center;">Sua sacola está vazia</p>
+        <p class="adicione__itens" style="font-size:13px;text-align:center;padding: 15px">Adicione itens</p>
+      </div>
+    </section>
+
     <section class="modal__container">
       <div class="modal">
         <button onclick="closeModal()" class="btn__close">
           <img class="btn__close-image" src="./images/fechar.png" alt="Icone fechar">
         </button>
         <div class="geral" id="containerGeral">
-        <div id="sacolaCheia">
-          <div class="section_one">
-            <p class="seu__pedido">Seu pedido em</p>
-            <h3 class="nome__restaurante">Sanduicheria</h3>
-            <span class="ver__cardapio">Ver Cardápio</span>
-          </div>
-          <h5 class="mais__vendidos">Mais Vendidos!!!</h5>
-          <div class="order">
-            <span class="order__name" id="order-name"></span>
-            <span class="order__value" id="order-value"></span>
-          </div>
-          <div class="btn__editar-remover">
-            <button id="btn-editar" onclick="btnEditar()">Editar</button>
-            <button id="btn-remover">Remover</button>
-          </div>
-          <div class="cupom">
-            <img class="cupom__image" src="./images/cupom.png" alt="Icone de aplicar um cupom">
-            <p class="cupom__titulo">Cupom</p>
-            <p class="cupom__codigo">Código de cupom</p>
-            <img class="cupom__arrow" src="./images/arrow.png" alt="Seta que encaminha para inserir cupom">
-          </div>
-          <div class="resumo_valores">
-            <div class="subtotal">
-              <span>Subtotal</span>
-              <span id="sub__valor"></span>
+          <div id="sacolaCheia">
+            <div class="section_one">
+              <p class="seu__pedido">Seu pedido em</p>
+              <h3 class="nome__restaurante">Sanduicheria</h3>
+              <span class="ver__cardapio">Ver Cardápio</span>
             </div>
-            <div class="entrega">
-              <span>Taxa de entrega</span>
-              <span id="entrega__valor">R$ 9,90</span>
+            <h5 class="mais__vendidos">Mais Vendidos!!!</h5>
+            <div class="order">
+              <span class="order__name" id="order-name"></span>
+              <span class="order__value" id="order-value"></span>
             </div>
-          </div>
-          <div>
-            <div class="total">
-              <span class="total__titulo">Total</span>
-              <span id="total__valor"></span>
+            <div class="btn__editar-remover">
+              <button id="btn-editar" onclick="btnEditar()">Editar</button>
+              <button id="btn-remover">Remover</button>
             </div>
-            <a href="./pages/login.html">
-            <button id="btn-pgto">Escolher forma de pagamento</button>
-            </a>
+            <div class="cupom">
+              <img class="cupom__image" src="./images/cupom.png" alt="Icone de aplicar um cupom">
+              <p class="cupom__titulo">Cupom</p>
+              <p class="cupom__codigo">Código de cupom</p>
+              <img class="cupom__arrow" src="./images/arrow.png" alt="Seta que encaminha para inserir cupom">
+            </div>
+            <div class="resumo_valores">
+              <div class="subtotal">
+                <span>Subtotal</span>
+                <span id="sub__valor"></span>
+              </div>
+              <div class="entrega">
+                <span>Taxa de entrega</span>
+                <span id="entrega__valor">R$ 9,90</span>
+              </div>
+            </div>
+            <div>
+              <div class="total">
+                <span class="total__titulo">Total</span>
+                <span id="total__valor"></span>
+              </div>
+              <a href="./pages/login.html">
+                <button id="btn-pgto">Escolher forma de pagamento</button>
+              </a>
+            </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
-    </div>
+
     <!-- Final do conteúdo do modal -->
   </header>
 
@@ -132,7 +149,8 @@
           <p class="prato__descricao">Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
           <p class="prato__valor">R$ 12,90</p>
           <p><s>R$ 16,90</s></p><br>
-          <button class="addIndividual" type="button" onclick="addIndividual(italiano)">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+          <button class="addIndividual" type="button" onclick="addIndividual(italiano)">Adicionar à sacola</button>
+          <!-- Esse botão ativa a função "addIndividual" do JS -->
         </div>
         <img class="foto" src="./images/italiano.png" alt="Foto do sanduiche italiano">
       </div>
@@ -142,7 +160,8 @@
           <p class="prato__descricao">Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
           <p class="prato__valor">R$ 15,90</p>
           <p><s>R$ 19,90</s></p><br>
-          <button class="addIndividual" type="button" onclick="addIndividual(grelhado);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+          <button class="addIndividual" type="button" onclick="addIndividual(grelhado);">Adicionar à sacola</button>
+          <!-- Esse botão ativa a função "addIndividual" do JS -->
         </div>
         <img class="foto" src="./images/grelhado.jpg" alt="Foto do sanduiche grelhado">
       </div>
@@ -152,7 +171,8 @@
           <p class="prato__descricao">Bacon, mussarela, tomate, alface, peito de peru, picles. Acompanha fritas.</p>
           <p class="prato__valor">R$ 19,90</p>
           <p><s>R$ 24,90</s></p><br>
-          <button class="addIndividual" type="button" onclick="addIndividual(bacon);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+          <button class="addIndividual" type="button" onclick="addIndividual(bacon);">Adicionar à sacola</button>
+          <!-- Esse botão ativa a função "addIndividual" do JS -->
         </div>
         <img class="foto" src="./images/bacon.jpg" alt="Foto do sanduiche de bacon">
       </div>
@@ -162,7 +182,8 @@
           <p class="prato__descricao">Mussarela, queijo prato, orégano</p>
           <p class="prato__valor">R$ 10,90</p>
           <p><s>R$ 13,90</s></p><br>
-          <button class="addIndividual" type="button" onclick="addIndividual(queijoQuente);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+          <button class="addIndividual" type="button" onclick="addIndividual(queijoQuente);">Adicionar à sacola</button>
+          <!-- Esse botão ativa a função "addIndividual" do JS -->
         </div>
         <img class="foto" src="./images/queijo-quente.jpg" alt="Foto do sanduiche queijo quente">
       </div>
@@ -172,7 +193,8 @@
           <p class="prato__descricao">Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
           <p class="prato__valor">R$ 19,90</p>
           <p><s>R$ 24,90</s></p><br>
-          <button class="addIndividual" type="button" onclick="addIndividual(rosbife);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+          <button class="addIndividual" type="button" onclick="addIndividual(rosbife);">Adicionar à sacola</button>
+          <!-- Esse botão ativa a função "addIndividual" do JS -->
         </div>
         <img class="foto" src="./images/rosbife.jpg" alt="Foto do sanduiche de rosbife">
       </div>
@@ -182,7 +204,8 @@
           <p class="prato__descricao">Sanduíche de croissant com bacon crocante de ovos mexidos e purê de abacate</p>
           <p class="prato__valor">R$ 19,90</p>
           <p><s>R$ 24,90</s></p><br>
-          <button class="addIndividual" type="button" onclick="addIndividual(croissant);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
+          <button class="addIndividual" type="button" onclick="addIndividual(croissant);">Adicionar à sacola</button>
+          <!-- Esse botão ativa a função "addIndividual" do JS -->
         </div>
         <img class="foto" src="./images/acabate.png" alt="Foto do sanduiche de croissant">
       </div>
@@ -253,4 +276,5 @@
   <script src="./scripts/address.js"></script>
   <script src="./scripts/order.js"></script>
 </body>
+
 </html>

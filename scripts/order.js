@@ -42,11 +42,17 @@ const sacola = [] // Array da sacola, itens adicionados entram aqui
 
 // Botão sacola que abre e fecha o modal
 const modal = document.querySelector(".modal__container")
+const modalVazio = document.querySelector(".modal__container-vazio")
 function verSacola() {
-    modal.classList.add("active")
+    if (sacola.length === 0) {
+        modalVazio.classList.add("active")
+    } else {
+        modal.classList.add("active")
+    }
 }
 function closeModal() {
     modal.classList.remove("active")
+    modalVazio.classList.remove("active")
 }
 
 
@@ -107,7 +113,7 @@ const addIndividual = (item) => {
         if (i < InfoLocalStorageSacola.length - 1 && nomeItem == InfoLocalStorageSacola[i + 1].nome) {
             totalCont++
         } else {
-            cont.push({nome: nomeItem, total: totalCont})
+            cont.push({ nome: nomeItem, total: totalCont })
             totalCont = 1
         }
 
@@ -139,32 +145,15 @@ const addIndividual = (item) => {
     let resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
     total.innerHTML = `R$ ${resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")}`
 
+
+    // //Botão remover dentro do modal
+    const btnRemover = document.getElementById('btn-remover')
+
+    btnRemover.addEventListener("click", () => {
+    location.reload() 
+    })
+
+
+    console.log(InfoLocalStorageSacola)
+
 }
-
-// //Botão remover dentro do modal
-// const apagarTudo = document.getElementById('sacolaCheia')
-// const sacolaVazia = document.getElementById('containerGeral')
-    // const btnRemover = document.getElementById('btn-remover')
-
-    // btnRemover.addEventListener("click", () => {
-    //     InfoLocalStorageSacola.pop()})
-
-// if (InfoLocalStorSacola.length > 1){
-//     function btnRemover() {
-//         sacola.pop()
-//     }
-// } else {
-//     function btnRemover() {
-//         localStorage.removeItem("pedido")
-//         apagarTudo.remove()
-
-//     const criarSacolaVazia = document.createElement("div")
-//     criarSacolaVazia.innerHTML =`
-//     <img src="./images/sacola-vazia.png" alt="Imagem de sacola vazia" style="padding: 60px 40px 40px 60px;" width="90%">
-//     <p style="font-size:14px;font-weight:600;text-align:center;">Sua sacola está vazia</p>
-//     <p style="font-size:13px;text-align:center;padding: 15px">Adicione itens</p>
-//     `
-//     sacolaVazia.append(criarSacolaVazia)
-// }
-// }
-
