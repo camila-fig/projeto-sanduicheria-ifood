@@ -1,5 +1,5 @@
 const nome = document.getElementById('nome')
-const cep = document.getElementById('cep')
+const campoCep = document.getElementById('cep')
 const rua = document.getElementById('rua')
 const numero = document.getElementById('numero')
 const complemento = document.getElementById('complemento')
@@ -14,7 +14,7 @@ let login = []
 //Limpa valores do formulário de cep.
 function limpa_formulario() {
     nome.value = ("")
-    cep.value = ("")
+    campoCep.value = ("")
     rua.value = ("")
     numero.value = ("")
     complemento.value = ("")
@@ -25,50 +25,42 @@ function limpa_formulario() {
 
 //Atualiza os campos com os valores.
 function meu_callback(conteudo) {
-    if (!("erro" in conteudo)) {        
-        rua.value = (conteudo.logradouro);
-        bairro.value = (conteudo.bairro);
-        cidade.value = (conteudo.localidade);
-        uf.value = (conteudo.uf);
+    if (!("erro" in conteudo)) {
+        rua.value = (conteudo.logradouro)
+        bairro.value = (conteudo.bairro)
+        cidade.value = (conteudo.localidade)
+        uf.value = (conteudo.uf)
     } else {
-        limpa_formulario();
-        alert("CEP não encontrado.");
+        limpa_formulario()
+        alert("CEP não encontrado.")
     }
 }
 
-function pesquisacep(valor) {
-    //Nova variável "cep" somente com dígitos.
-    let cep = valor.replace(/\D/g, '');
-    //Verifica se campo cep possui valor informado.
-    if (cep != "") {
-        //Expressão regular para validar o CEP.
-        let validacep = /^[0-9]{8}$/;
-        //Valida o formato do CEP.
+function pesquisaCep(valor) {
+    let cep = valor.replace(/\D/g, '') //Nova variável "cep" somente com dígitos.
 
+    if (cep != "") {        
+        let validacep = /^[0-9]{8}$/  //Expressão regular para validar o CEP conforme API.
+
+        //Valida o formato do CEP.
         if (validacep.test(cep)) {
             //Preenche os campos com "..." enquanto consulta webservice.
-            rua.value = "...";
-            bairro.value = "...";
-            cidade.value = "...";
-            uf.value = "...";
-
-            //Cria um elemento javascript.
-            let script = document.createElement('script');
-
-            //Sincroniza com o callback.
-            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
-
-            //Insere script no documento e carrega o conteúdo.
-            document.body.appendChild(script);
+            rua.value = "..."
+            bairro.value = "..."
+            cidade.value = "..."
+            uf.value = "..."
+            
+            let script = document.createElement('script')  //Cria um elemento javascript.           
+            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback'   //Sincroniza com o callback.
+            document.body.appendChild(script)   //Insere script no documento e carrega o conteúdo.
 
         } else {
-            //cep é inválido.
-            limpa_formulario();
-            alert("Formato de CEP inválido.");
+            limpa_formulario()
+            alert("Formato de CEP inválido.")
         }
-    } else {
-        //cep sem valor, limpa formulário.
-        limpa_formulario();
+
+    } else {        
+        limpa_formulario()  //cep sem valor, limpa formulário.
     }
 }
 
