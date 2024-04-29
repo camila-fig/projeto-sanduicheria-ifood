@@ -17,7 +17,7 @@
 
 body {
     min-height: 100vh;
-    background-image: url("../images/fundo-login.png");
+    background-image: url("../../images/fundo-login.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -111,39 +111,18 @@ body {
     padding: 12px;
  }
 
- .btns-celular-email {
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
- }
-
- .btn-celular {
+ .btn-cadastro {
     font-weight: 600;
     color: darkgray;
-    width: 50%;
+    width: 100%;
+    padding: 10px 5px 10px 15px;
     font-size: 15px;
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 5px;
  }
 
- .btn-celular:hover {
-    background-color: #ea1d2c;
-    color: white;
- }
-
- .btn-email {
-    font-weight: 600;
-    color: darkgray;
-    width: 50%;
-    font-size: 15px;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
- }
-
- .btn-email:hover {
+ .btn-cadastro:hover {
     background-color: #ea1d2c;
     color: white;
  }
