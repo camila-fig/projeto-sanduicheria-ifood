@@ -1,51 +1,59 @@
-function limpa_formulário_cep() {
-    //Limpa valores do formulário de cep.
-    document.getElementById('rua').value = ("");
-    document.getElementById('bairro').value = ("");
-    document.getElementById('cidade').value = ("");
-    document.getElementById('uf').value = ("");
-    document.getElementById('ibge').value = ("");
+const nome = document.getElementById('nome')
+const cep = document.getElementById('cep')
+const rua = document.getElementById('rua')
+const numero = document.getElementById('numero')
+const complemento = document.getElementById('complemento')
+const bairro = document.getElementById('bairro')
+const cidade = document.getElementById('cidade')
+const uf = document.getElementById('uf')
+const btnSalvar = document.getElementById('btnSalvar')
+const btnLimpar = document.getElementById('btnLimpar')
+
+let login = []
+
+//Limpa valores do formulário de cep.
+function limpa_formulario() {
+    nome.value = ("")
+    cep.value = ("")
+    rua.value = ("")
+    numero.value = ("")
+    complemento.value = ("")
+    bairro.value = ("")
+    cidade.value = ("")
+    uf.value = ("")
 }
 
+//Atualiza os campos com os valores.
 function meu_callback(conteudo) {
-    if (!("erro" in conteudo)) {
-        //Atualiza os campos com os valores.
-        document.getElementById('rua').value = (conteudo.logradouro);
-        document.getElementById('bairro').value = (conteudo.bairro);
-        document.getElementById('cidade').value = (conteudo.localidade);
-        document.getElementById('uf').value = (conteudo.uf);
-        document.getElementById('ibge').value = (conteudo.ibge);
-    } //end if.
-    else {
-        //CEP não Encontrado.
-        limpa_formulário_cep();
+    if (!("erro" in conteudo)) {        
+        rua.value = (conteudo.logradouro);
+        bairro.value = (conteudo.bairro);
+        cidade.value = (conteudo.localidade);
+        uf.value = (conteudo.uf);
+    } else {
+        limpa_formulario();
         alert("CEP não encontrado.");
     }
 }
 
 function pesquisacep(valor) {
-
     //Nova variável "cep" somente com dígitos.
-    var cep = valor.replace(/\D/g, '');
-
+    let cep = valor.replace(/\D/g, '');
     //Verifica se campo cep possui valor informado.
     if (cep != "") {
-
         //Expressão regular para validar o CEP.
-        var validacep = /^[0-9]{8}$/;
-
+        let validacep = /^[0-9]{8}$/;
         //Valida o formato do CEP.
-        if (validacep.test(cep)) {
 
+        if (validacep.test(cep)) {
             //Preenche os campos com "..." enquanto consulta webservice.
-            document.getElementById('rua').value = "...";
-            document.getElementById('bairro').value = "...";
-            document.getElementById('cidade').value = "...";
-            document.getElementById('uf').value = "...";
-            document.getElementById('ibge').value = "...";
+            rua.value = "...";
+            bairro.value = "...";
+            cidade.value = "...";
+            uf.value = "...";
 
             //Cria um elemento javascript.
-            var script = document.createElement('script');
+            let script = document.createElement('script');
 
             //Sincroniza com o callback.
             script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
@@ -53,15 +61,28 @@ function pesquisacep(valor) {
             //Insere script no documento e carrega o conteúdo.
             document.body.appendChild(script);
 
-        } //end if.
-        else {
+        } else {
             //cep é inválido.
-            limpa_formulário_cep();
+            limpa_formulario();
             alert("Formato de CEP inválido.");
         }
-    } //end if.
-    else {
+    } else {
         //cep sem valor, limpa formulário.
-        limpa_formulário_cep();
+        limpa_formulario();
     }
-};
+}
+
+btnSalvar.addEventListener("click", () => {
+    login.push({
+        nome: nome.value,
+        rua: rua.value,
+        nº: numero.value,
+        compl: complemento.value,
+        cidade: cidade.value,
+        estado: uf.value
+    })
+    localStorage.setItem("login", JSON.stringify(login))
+    limpa_formulario()
+})
+
+btnLimpar.addEventListener("click", limpa_formulario)
