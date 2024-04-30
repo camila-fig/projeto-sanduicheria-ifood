@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./payment.css">
+    <link rel="shortcut icon" href="../../images/favicon-ifood.png" type="image/x-icon">
+    <title>Finalizar</title>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <img class="logo-ifood" src="../../images/logo-ifood.png" alt="Volta para página inicial">
+        </a>
+    </header>
+    <main>
+        <div class="lado__esquerdo">
+            <h1>Finalize seu pedido</h1>
+            <span class="entrega">Entrega</span>
+            <span>Retirada</span>
+            <div>
+                <span><img src="../../images/mapa.png" alt=""></span>
+                <span>Seu endereço de entrega</span>
+                <button>Trocar</button>
+            </div>
+            <h3>Hoje, 59-69 min</h3>
+            <div class="caixa__entrega">
+                <p class="padrao">Padrão</p>
+                <p>Hoje, 59-69 min</p>
+                <p class="valor__entrega">R$ 9,90</p>
+            </div>
+            <span class="pague__site">Pague pelo site</span>
+            <span class="pague__entrega">Pague na entrega</span>
+            <div class="caixa__pix">
+                <span><img src="../../images/pix.png" alt="Logo do pagamento por PIX"></span>
+                <span>
+                    <p class="pague__pix">Pague com PIX</p>
+                    <p class="use__QR">Use o QR Code ou copie e cole o código</p>
+                </span>
+            </div>
+            <h3>Adicione um cartão no iFood</h3>
+            <div class="cartao">
+                <p class="cartao__text">É prático, seguro e vocênão perde nenhum minuto a mais quando seu pedido chegar.
+                </p>
+                <button class="cartao__btn">Adicionar novo cartão</button>
+                <img class="cartao__image" src="../../images/add-cartao.png" alt="Adicione um cartão">
+            </div>
+            <div class="cpf-cnpj">
+                <input type="text" placeholder="CPF/CNPJ na nota">
+            </div>
+            <button class="fazer__pedido">Fazer pedido</button>
+        </div>
+
+        <div class="geral" id="containerGeral">
+            <div id="sacolaCheia">
+                <div class="section_one">
+                    <p class="seu__pedido">Seu pedido em</p>
+                    <h3 class="nome__restaurante">Sanduicheria</h3>
+                    <span class="ver__cardapio">Ver Cardápio</span>
+                </div>
+                <h5 class="mais__vendidos">Novidade de Segunda a Quinta</h5>
+                <div class="order">
+                    <span class="order__name" id="order-name"></span>
+                    <span class="order__value" id="order-value"></span>
+                </div>
+                <div class="btn__editar-remover">
+                    <button id="btn-editar" onclick="btnEditar()">Editar</button>
+                    <button id="btn-remover">Remover</button>
+                </div>
+                <div class="cupom">
+                    <img class="cupom__image" src="../../images/cupom.png" alt="Icone de aplicar um cupom">
+                    <p class="cupom__titulo">Cupom</p>
+                    <p class="cupom__codigo">Código de cupom</p>
+                    <img class="cupom__arrow" src="../../images/arrow.png" alt="Seta que encaminha para inserir cupom">
+                </div>
+                <div class="resumo_valores">
+                    <div class="subtotal">
+                        <span>Subtotal</span>
+                        <span id="sub__valor"></span>
+                    </div>
+                    <div class="entrega">
+                        <span>Taxa de entrega</span>
+                        <span id="entrega__valor">R$ 9,90</span>
+                    </div>
+                    <div class="total">
+                        <span class="total__titulo">Total</span>
+                        <span id="total__valor"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../scripts/payment.js"></script>
+</body>
+</html>
