@@ -39,7 +39,7 @@ function meu_callback(conteudo) {
 function pesquisaCep(valor) {
     let cep = valor.replace(/\D/g, '') //Nova variável "cep" somente com dígitos.
 
-    if (cep != "") {        
+    if (cep != "") {
         let validacep = /^[0-9]{8}$/  //Expressão regular para validar o CEP conforme API.
 
         //Valida o formato do CEP.
@@ -49,7 +49,7 @@ function pesquisaCep(valor) {
             bairro.value = "..."
             cidade.value = "..."
             uf.value = "..."
-            
+
             let script = document.createElement('script')  //Cria um elemento javascript.           
             script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback'   //Sincroniza com o callback.
             document.body.appendChild(script)   //Insere script no documento e carrega o conteúdo.
@@ -59,7 +59,7 @@ function pesquisaCep(valor) {
             alert("Formato de CEP inválido.")
         }
 
-    } else {        
+    } else {
         limpa_formulario()  //cep sem valor, limpa formulário.
     }
 }
@@ -74,7 +74,11 @@ btnSalvar.addEventListener("click", () => {
         estado: uf.value
     })
     localStorage.setItem("login", JSON.stringify(login))
+    alert("Seus dados foram salvos com sucesso.\nVocê será direcionado para página inicial.")
     limpa_formulario()
+    setTimeout(function () {
+        window.location.href = "../../index.html";
+    }, 1000);
 })
 
 btnLimpar.addEventListener("click", limpa_formulario)

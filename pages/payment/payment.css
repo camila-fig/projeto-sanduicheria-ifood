@@ -19,28 +19,242 @@
 header {
     text-align: center;
     padding: 20px 0 20px 0;
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.logo-ifood {
+  width: 4%;
 }
 
  main {
     width: 100%;
     max-width: 1200px;
     margin: 0 10%;
-    gap: 16px;
     display: flex;
     flex-direction: row;
+    gap: 16%;
+    padding-top: 20px;
  }
 
-
-
-.logo-ifood {
-    width: 4%;
+.lado__esquerdo {
+  width: 580px;
 }
 
+h1 {
+  font-weight: 600;
+}
+
+.caixa__botoes {
+  padding: 40px 0 20px 0;
+}
+
+.entrega_vermelho {
+  font-size: 17px;
+  color: #ea1d2c;
+  border-bottom: #ea1d2c 3px solid;
+  padding-bottom: 10px;
+}
+
+.retirada {
+  font-size: 17px;
+  padding-left: 50px;
+  color: #989898;
+}
+
+.caixa__endereco {
+  padding: 20px 0 45px 0;
+  display: grid;
+  grid-template-columns: 1fr 6fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "image rua trocar"
+  "image cidade trocar";
+}
+
+.mapa__image {
+  width: 80%;
+  grid-area: image;
+}
+
+.seu__endereco-rua {
+  font-weight: 500;
+  grid-area: rua;
+}
+
+.seu__endereco-cidade {
+  color:#8a8a8a;
+  grid-area: cidade;
+}
+
+.btn__trocar {
+  color: #ea1d2c;
+  background-color: white;
+  font-size: 14px;
+  grid-area: trocar;
+}
+
+h3 {
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.caixa__entrega {
+  width: 85%;
+  border: #ea1d2c 1px solid;
+  border-radius: 5px;
+  padding: 10px 0 10px 20px;
+}
+
+.padrao {
+  font-size: 14px;
+  color: #ea1d2c;
+  padding-bottom: 10px;
+}
+
+.hoje {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.valor__entrega {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pix {
+  padding: 40px 0 40px 0;
+}
+
+.pague__site {
+  font-size: 17px;
+  color: #ea1d2c;
+  padding-bottom: 10px;
+  border-bottom: #ea1d2c 3px solid;
+}
+
+.pague__entrega {
+  font-size: 17px;
+  padding-left: 50px;
+  color: #989898;
+}
+
+.caixa__pix {
+  width: 87%;
+  border: lightgray 1px solid;
+  border-radius: 7px;
+  padding: 25px 10px 20px 10px;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-areas: 
+  "imagePix paguePix"
+  "imagePix pagueQR";
+}
+
+.caixa__pix:hover {
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 23px -7px rgba(184,184,184,1);
+  -moz-box-shadow: 0px 0px 23px -7px rgba(184,184,184,1);
+  box-shadow: 0px 0px 23px -7px rgba(184,184,184,1);
+}
+
+.pix__image {
+  padding: 10px 0 10px 10px;
+  width: 60%;
+  grid-area: imagePix;
+}
+
+.pague__pix {
+  padding-bottom: 5px;
+  font-weight: 500;
+  grid-area: paguePix;
+}
+
+.use__QR {
+  color: #989898;
+}
+
+.add__cartao {
+  padding-top: 50px;
+}
+
+.cartao {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 20px 40px 40px;
+  grid-template-areas: 
+  "text1 imageCartao"
+  "text2 imageCartao"
+  "botao imageCartao";
+  padding-bottom: 60px;
+}
+
+.cartao__text1 {
+  font-size: 14px;
+  color:#989898;
+  grid-area: text1;
+}
+
+.cartao__text2 {
+  font-size: 14px;
+  color:#989898;
+  grid-area: text2;
+  padding-bottom: 20px;
+}
+
+.cartao__btn {
+  font-weight: 600;
+  font-size: 15px;
+  color: #ea1d2c;
+  padding: 15px;
+  width: 300px;
+  background-color: white;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  grid-area: botao;
+}
+
+.cartao__image {
+  height: 140%;
+  grid-area: imageCartao;
+}
+
+.cpf-cnpj {
+  width: 87%;
+  border-top: lightgray solid 1px;
+  padding: 30px 0 30px 0;
+}
+
+.input__cpf-cnpj{
+  padding: 15px;
+  width: 100%;
+  border: lightgray solid 1px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: lightgray;
+}
+
+.fazer__pedido {
+  padding: 15px;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  background-color: #ea1d2c;
+  opacity: 35%;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.lado__direito {
+  width:420px ;
+}
 
 .geral {
-    width: 35%;
-    height: 90%;
+    width: 100%;
     background-color: white;
     padding: 30px;
     -webkit-box-shadow: 0px 0px 23px -7px rgba(184,184,184,1);
