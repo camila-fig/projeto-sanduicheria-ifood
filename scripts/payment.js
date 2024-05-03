@@ -7,9 +7,9 @@ const orderName = document.getElementById('order-name')
 const orderValue = document.getElementById('order-value')
 const subtotal = document.getElementById('sub__valor')
 const total = document.getElementById('total__valor')
-const criaNome = document.createElement('p')
-const criaValor = document.createElement('p')
 
+
+const arrayPedido = []
 
 if (InfoLocalStorageLogin && InfoLocalStorageSacola && InfoLocalStorageCont) {
     //Para preencher o endereço cadastrado
@@ -19,13 +19,18 @@ if (InfoLocalStorageLogin && InfoLocalStorageSacola && InfoLocalStorageCont) {
     })
 
     //Para armazenar o pedido com quantidades (agrupados) e multiplicar os valores parciais
+    console.log(InfoLocalStorageCont)
+
+
     InfoLocalStorageCont.map((cont) => {
+        const criaNome = document.createElement('p')
         criaNome.innerHTML = `${cont.total}x ${cont.nome}`
         orderName.append(criaNome)
 
         InfoLocalStorageSacola.map((item) => {
             const precoDescontoMultiplicado = item.preçoDesconto * cont.total
             const precoDesconto = precoDescontoMultiplicado.toFixed(2).toString().replace(".", ",")
+            const criaValor = document.createElement('p')
             criaValor.innerHTML = `R$ ${precoDesconto}`
             orderValue.append(criaValor)
         })
@@ -49,6 +54,3 @@ if (InfoLocalStorageLogin && InfoLocalStorageSacola && InfoLocalStorageCont) {
     alert("Antes de finalizar seu pedido, você deve fazer o login.")
     window.location.href = "../login/login.html"
 }
-
-console.log(InfoLocalStorageSacola)
-console.log(InfoLocalStorageCont)
