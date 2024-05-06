@@ -18,5 +18,5 @@
 <h3>Componentes do grupo (GitHub user):</h3>
 <ul>
   <li>camila-fig</li>
-  <li>car</li>
+  <li>carapola</li>
 </ul>
