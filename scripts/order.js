@@ -1,5 +1,4 @@
 // OBJETOS - lista dos itens em forma de objetos
-
 let italiano = {
     nome: "Italiano",
     preçoDesconto: 12.90,
@@ -144,16 +143,4 @@ const addIndividual = (item) => {
     }
     let resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
     total.innerHTML = `R$ ${resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")}`
-
-
-    // //Botão remover dentro do modal
-    const btnRemover = document.getElementById('btn-remover')
-
-    btnRemover.addEventListener("click", () => {
-    location.reload() 
-    })
-
-
-    console.log(InfoLocalStorageSacola)
-
 }
