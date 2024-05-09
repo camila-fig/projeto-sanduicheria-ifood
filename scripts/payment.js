@@ -7,7 +7,6 @@ const orderName = document.getElementById('order-name')
 const orderValue = document.getElementById('order-value')
 const subtotal = document.getElementById('sub__valor')
 const total = document.getElementById('total__valor')
-const btnRemover = document.getElementById('btn-remover')
 
 
 if (InfoLocalStorageLogin) {
@@ -57,5 +56,5 @@ subtotal.innerHTML = `R$ ${totalSacolaDuasCasas}`
 function totalComTaxa(totalSacola, taxa) {
     return totalSacola + taxa
 }
-let resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
+const resultadoTotalTaxa = totalComTaxa(totalSacola, 9.9)
 total.innerHTML = `R$ ${resultadoTotalTaxa.toFixed(2).toString().replace(".", ",")}`
