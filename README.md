@@ -15,7 +15,10 @@ $ cd projeto-sanduicheria-ifood
 
 Abra o arquivo index.html com o Live Server e navegue pelo site.
 
-## Capturas de tela
+## URL
+Também é possível acessar e navegar pelo site no seguinte endereço:
+
+<https://javascript-html-css-iota.vercel.app/>
 
 ## Componentes do grupo (GitHub user):
 <ul>
